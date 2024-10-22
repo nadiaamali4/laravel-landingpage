@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #514a54;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4B4CF2;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+/* Responsive Header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    header .button-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    header .button-group a {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+.auth {
+    display: flex;
+}
+
+.auth a {
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.sign-in {
+    color: #4B4CF2;
+}
+
+.register {
+    background-color: #4B4CF2;
+    color: #fff;
+}
+.hero {
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 70px 0;
+}
+.hero-image {
+    display: flex;
+    justify-content: center; /* Pusatkan gambar secara horizontal */
+    align-items: center; /* Pusatkan gambar secara vertikal (jika div memiliki tinggi yang ditentukan) */
+    padding: 20px; /* Sesuaikan padding jika diperlukan */
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%; /* Membuat gambar responsif, tidak akan melebihi lebar kontainer */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    display: block; /* Menghapus jarak kecil di bawah gambar */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-image {
+        padding: 10px; /* Kurangi padding pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image img {
+        max-width: 80%; /* Buat gambar sedikit lebih kecil pada layar yang sangat kecil */
+    }
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    color: #333;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #666;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #4B4CF2;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.how-it-works {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.how-it-works h2 {
+    font-size: 30px;
+    color: #333;
+}
+
+.how-it-works p {
+    margin: 20px 0;
+    color: #666;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.step {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+}
+
+.services {
+    padding: 150px 0;
+    background-color: #f8f9fa;
+}
+.services h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 70px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+    padding: 150px 0;
+    background-color: #4B4CF2;
+    color: #fff;
+}
+.testimonials h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+    max-width: 30%;
+    box-sizing: border-box;
+}
+
+.testimonial-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testimonial-author span {
+    font-size: 14px;
+    color: #4B4CF2;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        max-width: 100%;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    border-top: 1px solid #e1e1e1;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4B4CF2;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.footer-links a:first-child {
+    margin-left: 0;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-media a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #4B4CF2;
+    font-weight: 500;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links,
+    .social-media {
+        margin-top: 10px;
+    }
+
+    .footer-links a,
+    .social-media a {
+        margin: 5px 0;
+    }
+}
